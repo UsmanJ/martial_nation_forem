@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/radar/forem-theme-base.git
+  revision: 218ddc3f021756858c1b642139dfe65747adec3d
+  specs:
+    forem-theme-base (0.0.1)
+
+GIT
   remote: git://github.com/radar/forem.git
   revision: cef46620be4d5b8764b45f1143a3cbcc36daa512
   branch: rails4
@@ -234,6 +240,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   forem!
+  forem-theme-base!
   haml
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)
