@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => "/"
-  # root :to => "forem/forums#index"
+  root :to => "forem/forums#index"
 
-  root to: "home#index"
+  # root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
