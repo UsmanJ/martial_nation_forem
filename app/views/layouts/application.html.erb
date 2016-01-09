@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to 'Home', main_app.root_path %>
+  <%= link_to 'Home', main_app.forem_path %>
   <%= link_to 'Forums', forem.forums_path %>
   <% if user_signed_in? %>
     <%= link_to current_user.email, main_app.edit_user_registration_path %>
