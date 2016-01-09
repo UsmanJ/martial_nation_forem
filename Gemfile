@@ -23,12 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'devise'
 gem 'forem', :github => "radar/forem", :branch => "rails4"
-gem 'kaminari', '0.15.1'
-gem 'haml'
-gem "haml-rails", "~> 0.9"
-gem 'forem-theme-base', :github => 'radar/forem-theme-base'
+gem 'forem-bootstrap', github: "radar/forem-bootstrap"
+gem 'forem-redcarpet', github: "radar/forem-redcarpet"
+gem 'devise'
+gem 'kaminari'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,7 +41,8 @@ gem 'forem-theme-base', :github => 'radar/forem-theme-base'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rails_layout'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
@@ -51,9 +51,4 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
-
-group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
 end
