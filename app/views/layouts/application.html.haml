@@ -8,7 +8,6 @@
     = csrf_meta_tags
   %body
     = link_to 'Home', main_app.forem_path
-    = link_to 'Forums', forem.forums_path
     - if user_signed_in?
       = link_to current_user.email, main_app.edit_user_registration_path
       | #{link_to "Sign out", main_app.destroy_user_session_path, :method => :delete}
