@@ -9,8 +9,9 @@ feature "Topic" do
       fill_in('Password', with: 'testtest')
       fill_in('Password confirmation', with: 'testtest')
       click_button('Sign up')
-      click_button('General')
-      click_button('Create Topic')
+      click_link('General')
+      click_link('Create Topic')
+      save_and_open_page
     end
   end
 end
