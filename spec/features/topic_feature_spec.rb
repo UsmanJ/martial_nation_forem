@@ -14,4 +14,14 @@ feature "Topic" do
       click_link('New topic')
     end
   end
+
+  context "can not be posted" do
+    it "if user is not signed in" do
+      visit('/')
+      click_link('General')
+      click_link('Latest News')
+      click_link('New topic')
+      page.should have_content('Log in')
+    end
+  end
 end
