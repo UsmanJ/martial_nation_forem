@@ -8,14 +8,15 @@
     = csrf_meta_tags
   %body
     = link_to 'Home', main_app.forem_path
-    - if user_signed_in?
-      = link_to current_user.email, main_app.edit_user_registration_path
-      | #{link_to "Sign out", main_app.destroy_user_session_path, :method => :delete}
-      - if current_user.forem_admin
-        | #{link_to "Administrate", forem.admin_root_url}
-    - else
-      = link_to "Sign up", main_app.new_user_registration_path
-      | #{link_to "Sign in", main_app.new_user_session_path}
+    .authentication
+      - if user_signed_in?
+        = link_to current_user.email, main_app.edit_user_registration_path
+        | #{link_to "Sign out", main_app.destroy_user_session_path, :method => :delete}
+        - if current_user.forem_admin
+          | #{link_to "Administrate", forem.admin_root_url}
+      - else
+        = link_to "Sign up", main_app.new_user_registration_path
+        | #{link_to "Sign in", main_app.new_user_session_path}
     %p.notice= notice
     %p.alert= alert
     = yield

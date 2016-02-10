@@ -15,3 +15,7 @@
  *= require_self
  *= require forem-bootstrap
  */
+
+ .authentication {
+   float: right;
+ };
