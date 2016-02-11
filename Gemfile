@@ -29,6 +29,8 @@ gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 gem 'devise'
 gem 'kaminari'
 gem "haml-rails"
+gem 'devise-bootstrap-views'
+gem "bootstrap-sass-rails", "~> 2.2.2.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
